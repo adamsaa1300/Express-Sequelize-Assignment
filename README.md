@@ -1,7 +1,13 @@
 # Express & Sequelize Assignment
 
 ## Project Description
-A simple backend application built with Express and Sequelize that demonstrates models, relationships, and CRUD operations using Authors and Books.
+A simple backend application built with Express and Sequelize that demonstrates models, relationships, and CRUD operations using Students and Courses.
+
+**Student** has many **Courses** (one-to-many relationship)
+
+## Developer
+- Name: Adam Ghanem
+- Major: CAP
 
 ## Setup Instructions
 1. Clone the repository
@@ -17,41 +23,41 @@ Server will start on http://localhost:3000
 
 ## Available APIs
 
-### Authors
+### Students
 | Method | Endpoint | Description |
 |--------|----------|-------------|
-| GET | /authors | Get all authors |
-| GET | /authors/:id | Get one author |
-| POST | /authors | Create author |
-| PUT | /authors/:id | Update author |
-| DELETE | /authors/:id | Delete author |
+| GET | /students | Get all students |
+| GET | /students/:id | Get one student |
+| POST | /students | Create student |
+| PUT | /students/:id | Update student |
+| DELETE | /students/:id | Delete student |
 
-### Books
+### Courses
 | Method | Endpoint | Description |
 |--------|----------|-------------|
-| GET | /books | Get all books |
-| GET | /books/:id | Get one book |
-| POST | /books | Create book |
-| PUT | /books/:id | Update book |
-| DELETE | /books/:id | Delete book |
+| GET | /courses | Get all courses |
+| GET | /courses/:id | Get one course |
+| POST | /courses | Create course |
+| PUT | /courses/:id | Update course |
+| DELETE | /courses/:id | Delete course |
 
 ## Sample Requests
 
-### Create Author
-POST /authors
+### Create Student
+POST /students
 ```json
 {
   "name": "Adam Ghanem",
-  "bio": "CAP Student"
+  "major": "CAP"
 }
 ```
 
-### Create Book
-POST /books
+### Create Course
+POST /courses
 ```json
 {
-  "title": "My First Book",
-  "genre": "Education",
-  "AuthorId": 1
+  "title": "Data Structures",
+  "credits": 3,
+  "StudentId": 1
 }
 ```
